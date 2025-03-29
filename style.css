@@ -1,0 +1,249 @@
+/* Basic selectors - element/tag, grouping, nested, universal, id, class, attribute, 
+Pseudo element(::), Pseudo class(:) */
+
+:root{
+    --primary-color: #4caf50;
+    --secondary-color: #fff;
+    --background-color: #f4f4f4;
+    --card-backgroundk-color: #fff;
+    --card-shadow: rgba(0,0,0,0.2);
+    --padding: 0.5rem;
+    --margin: 0.5rem;
+}
+body{
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+h1, h2{
+    color: var(--primary-color); 
+}
+/* ul{
+    list-style: none;
+} */
+
+button{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.6rem;
+    margin: 0.8rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #45a049;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+.card{
+    background-color: var(--card-backgroundk-color);
+    color: var(--primary-color);
+    padding: 1.2rem;
+    margin: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.4rem var(--card-shadow)
+}
+
+/*header starts here*/
+header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 0.6rem 0;
+
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+}
+nav ul li{
+    margin: 0 0.8rem;
+}
+nav ul li a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+/*header ends here*/
+
+/*main starts here*/
+main{
+    width: 80%;
+    margin: auto;
+    padding: 1.2rem;
+}
+.intro{
+    height: 85vh;
+    background-image: url(./images/comp.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro__title{
+    font-size: 3.5rem;
+    background-color: rgba(225,225,225,0.2);
+    padding: 0.5rem;
+}
+.intro__des{
+    color: #fff;
+    font-size: 1.5rem;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about h2{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+#about ul li{
+    font-size: 1.2rem;
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+#skills h2{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5rem 0;
+}
+
+table, th, td{
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+th{
+    background-color: #f2f2f2;
+    font-size: 1.8rem;
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: medium;
+}
+#contact h2{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+#projects h2{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+#hobbies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+#hobbies h2{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+/*main ends here*/
+
+/*footer starts here*/
+footer{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    /*position: fixed;
+    bottom: 0; */
+}
+.footer__left a{
+    padding: 0.5rem;
+}
+.copyright{
+    margin-bottom: 0.5rem;
+}
+.social-media ul{
+    margin-top: -1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0rem;
+}
+.social-media h3{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.social-media a {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+/*footer ends here*/
+
+/*responsiveness starts here*/
+@media screen and (max-width: 1200px){
+}
+@media screen and (max-width: 900px){
+
+    .intro{
+        height: 20vh;
+        background-image: none;
+        text-align: center;
+    }
+    .intro__des{
+        color: black;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 768px){
+
+    footer{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px){
+
+}
+/*responsiveness ends here*/
